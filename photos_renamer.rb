@@ -52,6 +52,16 @@ def rename_photos(mapped_photos, grouped_photos, largest_digits)
     end
 end
 
+#TEST
+
+def test_rename_photos_output(string_input, expected_output)
+    if expected_output == solution(string_input)
+      "Output matches"
+    else
+      "Unexpected Output"
+    end
+end
+
 example_string = "photo.jpg, Krakow, 2013-09-05 14:08:15
 Mike.png, London, 2015-06-20 15:13:22
 myFriends.png, Krakow, 2013-09-05 14:07:13
@@ -90,12 +100,4 @@ puts solution(example_string)
 
 puts "\n*************** TEST ***************\n"
 
-def test_rename_photos_output(string_input, expected_output)
-    if expected_output == solution(string_input)
-      "Output matches"
-    else
-      "Unexpected Output"
-    end
-  end
-  
-  puts test_rename_photos_output(example_string, expected_output)
+puts test_rename_photos_output(example_string, expected_output)
